@@ -40,3 +40,33 @@ Inserts three products into the table.
 Updates the price of "Product A".
 
 Data Display: Retrieves and prints all products in the database to the console.
+
+# Easy JDBC Steps
+
+Import Necessary Packages:
+
+Import the required classes from the java.sql package to enable JDBC functionalities, such as Connection, DriverManager, Statement, PreparedStatement, and ResultSet.
+
+Load Driver (using DriverManager):
+
+Use Class.forName("com.mysql.cj.jdbc.Driver") to load the JDBC driver class, which allows the application to communicate with the MySQL database.
+
+Register Driver:
+
+The driver is registered automatically when it is loaded using DriverManager, enabling the application to establish connections to the database.
+
+Create Connection:
+
+Establish a connection to the database using DriverManager.getConnection(url, username, password), where url specifies the database location, and username and password are the credentials for accessing the database.
+
+Create Statement:
+
+Create a Statement or PreparedStatement object using the Connection object to execute SQL queries against the database.
+
+Execute Statement:
+
+Execute the SQL query using the executeQuery() method for SELECT statements or executeUpdate() for INSERT, UPDATE, or DELETE operations, which returns results or the number of affected rows.
+
+Close:
+
+Close the ResultSet, Statement, and Connection objects to free up database resources and prevent memory leaks, ensuring proper cleanup after database operations.
